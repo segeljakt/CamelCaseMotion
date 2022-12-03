@@ -154,7 +154,7 @@ for s:mode in ['n', 'o', 'v']
   for s:motion in ['w', 'b', 'e', 'ge']
     let s:targetMapping = '<Plug>CamelCaseMotion_' . s:motion
     execute s:mode . 'noremap <silent> ' . s:targetMapping .
-          \ ' <cmd><C-U>call camelcasemotion#Motion(''' . s:motion . ''',v:count1,''' . s:mode . ''')<CR>'
+          \ ' <C-U><cmd>call camelcasemotion#Motion(''' . s:motion . ''',v:count1,''' . s:mode . ''')<CR>'
   endfor
 endfor
 
@@ -173,7 +173,7 @@ for s:mode in ['o', 'v']
   for s:motion in ['w', 'b', 'e', 'ge']
     let s:targetMapping = '<Plug>CamelCaseMotion_i' . s:motion
     execute s:mode . 'noremap <silent> ' . s:targetMapping .
-          \ ' <cmd><C-U>call camelcasemotion#InnerMotion(''' . s:motion . ''',v:count1)<CR>'
+          \ ' <C-U><cmd>call camelcasemotion#InnerMotion(''' . s:motion . ''',v:count1)<CR>'
   endfor
 endfor
 
